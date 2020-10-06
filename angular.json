@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "userApp"
+    }
+  },
+  "defaultProject": "userApp",
+  "cli": {
+    "analytics": false
+  }
 }
