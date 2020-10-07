@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyGroceryServiceService } from '../my-grocery-service.service'
+import { MyUserServiceService } from '../my-user-details.service'
 import { ConstantPool } from '@angular/compiler';
 import { Router } from '@angular/router'
 
@@ -11,7 +11,7 @@ import { Router } from '@angular/router'
 })
 export class LoginComponent implements OnInit {
   loginUserData = { email: null, password: null };
-  constructor(private loginService: MyGroceryServiceService, private router: Router) { }
+  constructor(private loginService: MyUserServiceService, private router: Router) { }
 
   ngOnInit(): void {
   }

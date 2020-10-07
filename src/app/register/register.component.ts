@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyGroceryServiceService } from '../my-grocery-service.service';
+import { MyUserServiceService } from '../my-user-details.service';
 import { Router } from '@angular/router'
 import { from } from 'rxjs';
 
@@ -10,13 +10,13 @@ import { from } from 'rxjs';
 })
 export class RegisterComponent implements OnInit {
 
-  registerUserData = { email:null, password:null};
-  constructor(private RegisterService: MyGroceryServiceService, private router: Router) { }
+  registerUserData = { email:null, password:null,name:null,Phone: null};
+  constructor(private RegisterService: MyUserServiceService, private router: Router) { }
 
   ngOnInit(): void {
   }
   registerUser() {
-    this.RegisterService.registerUser(this.registerUserData)
+   this.RegisterService.registerUser(this.registerUserData)
       .subscribe(
         res => {
           console.log(res);
